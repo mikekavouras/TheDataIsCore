@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		8D9E4ABB246F2FC100134C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D9E4AB9246F2FC100134C4B /* LaunchScreen.storyboard */; };
 		8D9E4AC6246F2FC100134C4B /* TheDataIsCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9E4AC5246F2FC100134C4B /* TheDataIsCoreTests.swift */; };
 		8D9E4AD1246F2FC100134C4B /* TheDataIsCoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9E4AD0246F2FC100134C4B /* TheDataIsCoreUITests.swift */; };
+		8D9E4AE0246F311300134C4B /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9E4ADE246F311300134C4B /* Person+CoreDataClass.swift */; };
+		8D9E4AE1246F311300134C4B /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9E4ADF246F311300134C4B /* Person+CoreDataProperties.swift */; };
+		8DCC264F246F3BEA003B878D /* CoreStore in Frameworks */ = {isa = PBXBuildFile; productRef = 8DCC264E246F3BEA003B878D /* CoreStore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,8 @@
 		8D9E4ACC246F2FC100134C4B /* TheDataIsCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheDataIsCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9E4AD0246F2FC100134C4B /* TheDataIsCoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDataIsCoreUITests.swift; sourceTree = "<group>"; };
 		8D9E4AD2246F2FC100134C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D9E4ADE246F311300134C4B /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8D9E4ADF246F311300134C4B /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCC264F246F3BEA003B878D /* CoreStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +111,8 @@
 				8D9E4AAD246F2FC100134C4B /* SceneDelegate.swift */,
 				8D9E4AAF246F2FC100134C4B /* ViewController.swift */,
 				8D9E4AB1246F2FC100134C4B /* Main.storyboard */,
+				8D9E4ADE246F311300134C4B /* Person+CoreDataClass.swift */,
+				8D9E4ADF246F311300134C4B /* Person+CoreDataProperties.swift */,
 				8D9E4AB7246F2FC100134C4B /* Assets.xcassets */,
 				8D9E4AB9246F2FC100134C4B /* LaunchScreen.storyboard */,
 				8D9E4ABC246F2FC100134C4B /* Info.plist */,
@@ -147,6 +155,9 @@
 			dependencies = (
 			);
 			name = TheDataIsCore;
+			packageProductDependencies = (
+				8DCC264E246F3BEA003B878D /* CoreStore */,
+			);
 			productName = TheDataIsCore;
 			productReference = 8D9E4AA8246F2FC100134C4B /* TheDataIsCore.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +230,9 @@
 				Base,
 			);
 			mainGroup = 8D9E4A9F246F2FC100134C4B;
+			packageReferences = (
+				8DCC264D246F3BEA003B878D /* XCRemoteSwiftPackageReference "CoreStore" */,
+			);
 			productRefGroup = 8D9E4AA9246F2FC100134C4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,6 +278,8 @@
 			files = (
 				8D9E4AB0246F2FC100134C4B /* ViewController.swift in Sources */,
 				8D9E4AAC246F2FC100134C4B /* AppDelegate.swift in Sources */,
+				8D9E4AE1246F311300134C4B /* Person+CoreDataProperties.swift in Sources */,
+				8D9E4AE0246F311300134C4B /* Person+CoreDataClass.swift in Sources */,
 				8D9E4AB6246F2FC100134C4B /* TheDataIsCore.xcdatamodeld in Sources */,
 				8D9E4AAE246F2FC100134C4B /* SceneDelegate.swift in Sources */,
 			);
@@ -594,6 +610,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DCC264D246F3BEA003B878D /* XCRemoteSwiftPackageReference "CoreStore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnEstropia/CoreStore.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DCC264E246F3BEA003B878D /* CoreStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DCC264D246F3BEA003B878D /* XCRemoteSwiftPackageReference "CoreStore" */;
+			productName = CoreStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8D9E4AB4246F2FC100134C4B /* TheDataIsCore.xcdatamodeld */ = {
